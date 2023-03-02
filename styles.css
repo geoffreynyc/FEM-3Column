@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --darkcyan: hsl(184, 100%, 22%);
+  --verydarkcyan: hsl(179, 100%, 13%);
+  --transparentwhite: hsla(0, 0%, 100%, 0.75);
+  --lightgrey: hsl(0, 0%, 95%);
+  --font-bigshoulders: "Big Shoulders Display", cursive;
+  --font-lexend: "Lexend Deca", sans-serif;
+}
+
+.wrapper {
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  padding: 3rem;
+}
+
+.sedans {
+  background-color: var(--orange);
+}
+
+.suvs {
+  background-color: var(--darkcyan);
+}
+
+.luxury {
+  background-color: var(--verydarkcyan);
+}
+
+h2 {
+  font-family: var(--font-bigshoulders);
+  color: var(--lightgrey);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--transparentwhite);
+  font-family: var(--font-lexend);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--lightgrey);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-family: var(--font-lexend);
+}
+
+.sedans-btn {
+  color: var(--orange);
+}
+.suvs-btn {
+  color: var(--darkcyan);
+}
+.luxury-btn {
+  color: var(--verydarkcyan);
+}
+
+.sedans-btn:hover {
+  background-color: var(--orange);
+  border: 3px solid var(--transparentwhite);
+  transition: background-color 0.5s ease;
+  color: var(--transparentwhite);
+}
+.suvs-btn:hover {
+  background-color: var(--darkcyan);
+  border: 3px solid var(--transparentwhite);
+  transition: background-color 0.5s ease;
+  color: var(--transparentwhite);
+}
+.luxury-btn:hover {
+  background-color: var(--verydarkcyan);
+  border: 3px solid var(--transparentwhite);
+  transition: background-color 0.5s ease;
+  color: var(--transparentwhite);
+}
+
+img,
+h2,
+p {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 650px) {
+  body {
+    height: 100vh;
+  }
+  .wrapper {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1000px;
+    height: 520px;
+    margin: auto;
+    margin-top: 8rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 6rem;
+  }
+}
